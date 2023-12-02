@@ -6,7 +6,7 @@ class SimulationList:
   def __init__(this, parent, simulations):
     this.window = Toplevel(parent)
     this.window.title("Симуляции")
-    this.window.geometry("300x300")
+    this.window.attributes('-fullscreen', True)
 
     def openSimulation(simulation):
       this.currentSimulation = SimulationView(simulation=simulation)
