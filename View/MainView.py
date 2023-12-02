@@ -6,7 +6,7 @@ class MainView:
   def __init__(this, title):    
     this.window = Tk()
     this.window.title(title)
-
+    this.window.geometry("1000x1000")
     this.loadViews()
 
   def loadViews(this):
