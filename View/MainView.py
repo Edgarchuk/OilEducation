@@ -1,5 +1,4 @@
 from tkinter import *
-from tkinter import ttk
 from Model.SimulationModel import Simulation
 
 from View.SimulationList import SimulationList
@@ -9,7 +8,7 @@ class MainView:
     this.window = Tk()
     this.window.title('Меню')
     this.window.attributes('-fullscreen', True)
-    this.window['background']='#07020D'
+    this.window['background']='cornsilk3'
     this.loadViews()
 
   def loadViews(this):
@@ -18,7 +17,8 @@ class MainView:
     this.menu.setButtons([VerticalMenu.ButtonOption(title="Симуляции", command=this.openSimulationWindow),VerticalMenu.ButtonOption(title="Выход", command=this.window.destroy)])
 
   def openSimulationWindow(this):
-    this.simulation = SimulationList(this.window, [Simulation("test", ["one", "two", "three"], NONE)])
+    this.simulation = SimulationList(this.window, [Simulation("Порыв выкидного трубопровода между скважиной и АГЗУ типа «Спутник»", ["one", "two", "three"], NONE)])
+    this.window.withdraw()
 
   def mainloop(this):
     this.window.mainloop()
